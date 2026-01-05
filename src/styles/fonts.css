@@ -1,0 +1,13 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
+@font-face {
+  font-family: 'Gotham';
+  src: local('Montserrat'), local('sans-serif');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: local('Montserrat Bold'), local('sans-serif');
+  font-weight: 700;
+}
