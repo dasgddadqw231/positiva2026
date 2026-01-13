@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import { Excellence } from "./components/Excellence";
 import { AboutSection } from "./components/AboutSection";
 import { Products } from "./components/Products";
+import { GiftSet } from "./components/GiftSet";
 import { Standard } from "./components/Standard";
 import { StoreBanner } from "./components/StoreBanner";
 import { News } from "./components/News";
@@ -22,6 +23,7 @@ export default function App() {
         <Excellence lang={lang} />
         <AboutSection lang={lang} />
         <Products lang={lang} />
+        <GiftSet lang={lang} />
         <Standard lang={lang} />
         <StoreBanner lang={lang} />
         <News lang={lang} />

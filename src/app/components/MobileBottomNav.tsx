@@ -21,7 +21,7 @@ export function MobileBottomNav({ lang }: { lang: 'KR' | 'EN' }) {
             <div className="w-[1px] h-[20px] bg-[#f0f0f0]" />
 
             <a
-                href="tel:01043639985"
+                href="tel:07080647732"
                 className="flex flex-col items-center justify-center gap-1 w-full h-full active:bg-gray-50 transition-colors"
             >
                 <Phone className="size-5 text-[#09090a]" />

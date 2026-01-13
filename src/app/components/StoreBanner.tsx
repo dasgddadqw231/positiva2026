@@ -23,7 +23,7 @@ export function StoreBanner({ lang }: { lang: 'KR' | 'EN' }) {
           className="flex flex-col gap-[20px] items-center text-white"
         >
           <p className="font-['Gotham',sans-serif] font-bold text-[20px] opacity-60 tracking-[-0.114px]">ONLINE STORE</p>
-          <p className="font-['Pretendard',sans-serif] font-bold text-3xl md:text-[40px] tracking-[-1.128px] leading-[1.3]">
+          <p className="font-['Pretendard',sans-serif] font-bold text-3xl md:text-[40px] tracking-[-1.128px] leading-[1.3] break-keep">
             {lang === 'KR'
               ? "지금, POSITIVA를 만나보세요"
               : "Meet POSITIVA Now"}
@@ -41,12 +41,12 @@ export function StoreBanner({ lang }: { lang: 'KR' | 'EN' }) {
             href="https://smartstore.naver.com/globalfoodmall"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white flex gap-[16px] h-[54px] w-full sm:w-[240px] items-center justify-center px-[24px] py-[16px] relative rounded-[4px] border border-[#e8e9ea] hover:bg-gray-50 transition-colors"
+            className="bg-white flex gap-[16px] h-[72px] w-full sm:w-[360px] items-center justify-center px-[24px] py-[16px] relative rounded-[4px] border border-[#e8e9ea] hover:bg-gray-50 transition-colors"
           >
-            <div className="relative rounded-[4px] shrink-0 size-[24px]">
+            <div className="relative rounded-[4px] shrink-0 size-[30px]">
               <img src={imgSearchPstatic1} alt="Naver" className="absolute inset-0 size-full object-cover rounded-[4px]" />
             </div>
-            <span className="font-['Gotham',sans-serif] font-bold text-[14px] text-[#09090a] tracking-[-0.0798px] leading-none">
+            <span className="font-['Gotham',sans-serif] font-bold text-[18px] text-[#09090a] tracking-[-0.0798px] whitespace-nowrap">
               {lang === 'KR' ? "네이버 스마트스토어" : "Naver Smart Store"}
             </span>
           </a>
@@ -55,13 +55,13 @@ export function StoreBanner({ lang }: { lang: 'KR' | 'EN' }) {
             href="https://www.coupang.com/vp/products/9086519269?itemId=26708130620&searchId=feed-22dd83048a1d4ae584c147d6ff14227a-3.3.37%3Aview_together_ads-P9084964244&vendorItemId=93679866768&sourceType=SDP_ADS&clickEventId=b5badb10-ea3a-11f0-8795-de2abe28d52a"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white flex gap-[16px] h-[54px] w-full sm:w-[240px] items-center justify-center px-[24px] py-[16px] relative rounded-[4px] border border-[#e8e9ea] hover:bg-gray-50 transition-colors"
+            className="bg-white flex gap-[16px] h-[72px] w-full sm:w-[360px] items-center justify-center px-[24px] py-[16px] relative rounded-[4px] border border-[#e8e9ea] hover:bg-gray-50 transition-colors"
           >
-            <div className="relative shrink-0 size-[24px] flex items-center justify-center">
-              <Rocket className="size-5 text-[#E60A15]" />
+            <div className="relative shrink-0 size-[30px] flex items-center justify-center">
+              <Rocket className="size-6 text-[#E60A15]" />
             </div>
-            <span className="font-['Pretendard',sans-serif] font-bold text-[14px] text-[#09090a] tracking-[-0.0798px] leading-none">
-              {lang === 'KR' ? "쿠팡" : "Coupang"}
+            <span className="font-['Pretendard',sans-serif] font-bold text-[18px] text-[#09090a] tracking-[-0.0798px] whitespace-nowrap">
+              {lang === 'KR' ? "쿠팡 로켓배송" : "Coupang"}
             </span>
           </a>
         </motion.div>

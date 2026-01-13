@@ -15,7 +15,7 @@ export function Header({ lang, setLang }: { lang: 'KR' | 'EN', setLang: (lang: '
     }
   }, [isOpen]);
 
-  const navItems = ["ABOUT", "PRODUCT", "STORE", "NEWS", "CONTACT"];
+  const navItems = ["BRAND", "PRODUCT", "STORE", "NEWS", "CONTACT"];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">

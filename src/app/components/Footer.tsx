@@ -9,7 +9,7 @@ export function Footer({ lang }: { lang: 'KR' | 'EN' }) {
             <h2 className="font-['Gotham',sans-serif] font-bold text-2xl md:text-[28px] leading-snug tracking-tight">
               Olive Oil,<br />defined by POSITIVA.
             </h2>
-            
+
             <div className="space-y-2 font-['Pretendard',sans-serif] font-medium text-sm text-[#858588] leading-relaxed">
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                 <span>{lang === 'KR' ? "(주)대아트레이딩" : "Daea Trading Co., Ltd."}</span>
@@ -17,12 +17,12 @@ export function Footer({ lang }: { lang: 'KR' | 'EN' }) {
                 <span>{lang === 'KR' ? "대표 백민주" : "CEO Minju Baek"}</span>
               </div>
               <p>
-                {lang === 'KR' 
-                  ? "서울특별시 강남구 봉은사로 524 (코엑스인터콘티넨탈서울) 비2층 200-10호" 
+                {lang === 'KR'
+                  ? "서울특별시 강남구 봉은사로 524 (코엑스 인터콘티넨탈서울) 비2층 200-10호"
                   : "200-10, B2, 524, Bongeunsa-ro, Gangnam-gu, Seoul, Republic of Korea"}
               </p>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-                <span>{lang === 'KR' ? "고객센터: 010-4363-9985" : "Customer Center: 010-4363-9985"}</span>
+                <span>{lang === 'KR' ? "고객센터: 070-8064-7732" : "Customer Center: 070-8064-7732"}</span>
                 <span className="w-px h-3 bg-[#47484c]" />
                 <span>{lang === 'KR' ? "이메일: daeatrading@naver.com" : "Email: daeatrading@naver.com"}</span>
               </div>

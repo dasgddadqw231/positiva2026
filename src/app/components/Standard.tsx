@@ -21,10 +21,18 @@ export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
       desc: lang === 'KR' ? (
         <>
           POSITIVA는 스페인 유기농<br />단일 품종 올리브만을 사용해<br />원료의 출처와 기준을 명확히 합니다.
+          <span className="block mt-4 text-[13px] font-normal opacity-70">
+            - 아르베키나 품종 (올리브오일, 올레샷)<br />
+            - 피쿠알 품종 (올토샷)
+          </span>
         </>
       ) : (
         <>
           POSITIVA uses only<br />Spanish organic single-origin olives<br />to clarify the source and standard.
+          <span className="block mt-4 text-[13px] font-normal opacity-70">
+            - Arbequina Variety (Olive Oil, Oleo Shot)<br />
+            - Picual Variety (Oleo-To Shot)
+          </span>
         </>
       )
     },
@@ -53,10 +61,18 @@ export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
       desc: lang === 'KR' ? (
         <>
           불필요한 가공을 줄이고<br />올리브 본연의 풍미와 균형을<br />정직하게 담아냅니다.
+          <span className="block mt-4 text-[13px] font-normal opacity-70">
+            - 100% 유기농 올리브오일<br />
+            - 100% 레몬, 100% 토마토 착즙
+          </span>
         </>
       ) : (
         <>
           We reduce unnecessary processing<br />and honestly capture the natural<br />flavor and balance of olives.
+          <span className="block mt-4 text-[13px] font-normal opacity-70">
+            - 100% Organic Olive Oil<br />
+            - 100% Lemon, 100% Tomato Juice
+          </span>
         </>
       )
     },
@@ -100,7 +116,7 @@ export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
             <span className="font-['Gotham',sans-serif] font-bold text-sm md:text-[20px] text-[#fcda2c] tracking-widest">BRAND VALUE</span>
             <h2 className="font-['Gotham',sans-serif] font-bold text-3xl md:text-[60px] text-[#09090a]">POSITIVA STANDARD</h2>
           </div>
-          <p className="font-['Pretendard',sans-serif] font-bold text-lg md:text-[24px] text-[#09090a]">
+          <p className="font-['Pretendard',sans-serif] font-bold text-lg md:text-[24px] text-[#09090a] break-keep">
             {lang === 'KR' ? (
               <>
                 불필요한 것은 덜어내고<br />기준이 되는 것만 남겼습니다.
@@ -129,8 +145,8 @@ export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
               <div className="space-y-[20px]">
                 <h3 className="font-['Gotham',sans-serif] font-bold text-[24px] text-[#09090a] leading-none tracking-[-0.552px]">{v.title}</h3>
                 <div className="space-y-[8px]">
-                  <p className="font-['Pretendard',sans-serif] font-bold text-[18px] text-[#47484c] tracking-[-0.0036px]">{v.subtitle}</p>
-                  <p className="font-['Pretendard',sans-serif] font-medium text-[14px] text-[#858588] leading-[1.429] tracking-[0.203px]">
+                  <p className="font-['Pretendard',sans-serif] font-bold text-[18px] text-[#47484c] tracking-[-0.0036px] break-keep">{v.subtitle}</p>
+                  <p className="font-['Pretendard',sans-serif] font-medium text-[14px] text-[#858588] leading-[1.429] tracking-[0.203px] break-keep">
                     {v.desc}
                   </p>
                 </div>
