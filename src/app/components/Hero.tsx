@@ -10,7 +10,7 @@ import {
 } from "./ui/carousel";
 import img811 from "@/assets/images/hero1.png";
 import imgSecond from "@/assets/images/hero2.png";
-import imgThird from "@/assets/images/hero3.jpg";
+import imgThird from "@/assets/images/hero3_tomato.png";
 import imgFourth from "@/assets/images/hero4.png";
 
 export function Hero({ lang }: { lang: 'KR' | 'EN' }) {
@@ -105,7 +105,7 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' }) {
                 <div className="relative w-full h-full">
                   <img
                     alt={`Hero slide ${index + 1}`}
-                    className={`w-full h-full object-cover ${index === 3 ? 'object-[50%_55%]' : 'object-[50%_75%]'}`}
+                    className={`w-full h-full object-cover ${index === 3 ? 'object-[50%_55%]' : index === 2 ? 'object-[50%_50%]' : 'object-[50%_75%]'}`}
                     src={slide.image}
                   />
                   <div className="absolute inset-0 bg-black/20" />
