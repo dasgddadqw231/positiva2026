@@ -57,7 +57,7 @@ export function Excellence({ lang }: { lang: 'KR' | 'EN' }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        className="relative max-w-[1440px] mx-auto px-6 flex flex-col items-center text-center gap-10"
+        className="relative max-w-[1440px] mx-auto px-3 md:px-6 flex flex-col items-center text-center gap-10"
       >
         <div className="space-y-4">
           <h2 className="font-['Gotham',sans-serif] font-bold text-5xl md:text-[120px] leading-[0.9] tracking-tighter text-[#09090a] uppercase">

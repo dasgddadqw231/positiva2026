@@ -23,8 +23,8 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
       image: imgProduct1,
       title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 100%" : "Organic Extra Virgin Olive Oil 100%",
       desc: lang === 'KR'
-        ? <>산도 0.19 프리미엄 엑스트라버진 올리브오일<br />(스페인 아르베키나 품종)</>
-        : "Basic oil capturing the natural flavor and balance of olives by cold pressing single-origin organic olives",
+        ? <>산도 0.19 프리미엄 엑스트라버진 올리브오일<br />스페인 아르베키나 품종</>
+        : <>Acidity 0.19 Premium Extra Virgin Olive Oil<br />Spanish Arbequina Variety</>,
       detail: lang === 'KR'
         ? (
           <div className="flex flex-col gap-4">
@@ -59,8 +59,8 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
       image: imgProduct2,
       title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 레몬 올레샷" : "Organic Extra Virgin Olive Oil Lemon Ole Shot",
       desc: lang === 'KR'
-        ? <>화제의 아이템! 최적의 황금 비율 올레샷<br />(올리브오일 65%, 레몬즙 35%)</>
-        : "Daily olive shot enjoyed refreshingly by adding Spanish lemon to organic olive oil",
+        ? <>화제의 아이템! 최적의 황금 비율 올레샷<br />스페인 아르베키나 품종 (올리브오일 65%, 레몬35%)</>
+        : <>Hot Item! Optimal Golden Ratio Oleo Shot<br />Spanish Arbequina Variety (Olive Oil 65%, Lemon 35%)</>,
       detail: lang === 'KR'
         ? (
           <div className="flex flex-col gap-4">
@@ -82,7 +82,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
               <span className="text-[#FF9D00] text-lg leading-none mt-0.5">★</span>
               <div className="flex flex-col">
                 <span className="font-bold text-[#09090a] text-base">최적의 황금 비율</span>
-                <span className="text-[#858588] text-sm">올리브오일 65%, 레몬즙 35%</span>
+                <span className="text-[#858588] text-sm">올리브오일 65%, 레몬35%</span>
               </div>
             </div>
             <div className="flex items-start gap-2">
@@ -102,8 +102,8 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
       image: imgProduct3,
       title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 토마토 올토샷" : "Organic Extra Virgin Olive Oil Tomato Ole Shot",
       desc: lang === 'KR'
-        ? <>올리브오일과 토마토를 블렌딩하여 가볍게 즐기는 올토샷<br />(스페인 피쿠알 품종)</>
-        : "Daily olive shot enjoyed lightly by blending organic olive oil and tomato",
+        ? <>올리브오일과 토마토를 블렌딩하여 가볍게 즐기는 올토샷<br />스페인 피쿠알 품종 (올리브오일 40%, 토마토 60%)</>
+        : <>Oltoshot lightly enjoyed by blending olive oil and tomato<br />Spanish Picual Variety (Olive Oil 40%, Tomato 60%)</>,
       detail: lang === 'KR'
         ? (
           <div className="flex flex-col gap-4">
@@ -144,7 +144,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
 
   return (
     <section id="product" className="py-20 md:py-[120px] bg-[#fffcf3]">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[60px] space-y-20">
+      <div className="max-w-[1440px] mx-auto px-3 md:px-[60px] space-y-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -156,7 +156,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
             <span className="font-['Gotham',sans-serif] font-bold text-sm md:text-[20px] text-[#fcda2c] tracking-widest">PRODUCT</span>
             <h2 className="font-['Gotham',sans-serif] font-bold text-3xl md:text-[60px] text-[#09090a]">OLIVE OIL COLLECTION</h2>
           </div>
-          <p className="font-['Pretendard',sans-serif] font-bold text-lg md:text-[24px] text-[#09090a]">
+          <p className="font-['Pretendard',sans-serif] font-bold text-lg md:text-[24px] text-[#09090a] tracking-[-0.03em]">
             {lang === 'KR' ? (
               <>
                 유기농 단일 품종 올리브로 만든<br />일상에 자연스럽게 쓰이는 POSITIVA의 올리브오일
@@ -169,7 +169,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
           </p>
         </motion.div>
 
-        <div className="flex overflow-x-auto snap-x snap-mandatory pb-8 md:grid md:grid-cols-3 md:gap-20 md:overflow-visible md:pb-0 scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0">
+        <div className="flex overflow-x-auto snap-x snap-mandatory pb-8 md:grid md:grid-cols-3 md:gap-20 md:overflow-visible md:pb-0 scrollbar-hide -mx-3 px-3 md:mx-0 md:px-0">
           {products.map((p, index) => (
             <motion.div
               key={p.id}
@@ -178,12 +178,12 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }}
               onClick={() => setSelectedProduct(p)}
-              className="group space-y-6 flex-shrink-0 w-[80vw] snap-center md:w-auto mr-6 md:mr-0 last:mr-0 cursor-pointer"
+              className="group space-y-6 flex-shrink-0 w-[90vw] snap-center md:w-auto mr-6 md:mr-0 last:mr-0 cursor-pointer"
             >
               <div className="aspect-square overflow-hidden rounded-sm relative">
                 <img src={p.image} alt={p.title} className="w-full h-full object-contain mix-blend-multiply transition-transform duration-500 group-hover:scale-110" />
               </div>
-              <div className="px-2 space-y-4">
+              <div className="space-y-4">
                 <div className="space-y-1">
                   <h3 className="font-['Pretendard',sans-serif] font-bold text-lg md:text-[20px] text-[#09090a]">{p.title}</h3>
                   <p className="font-['Pretendard',sans-serif] font-regular text-sm text-[#858588] leading-relaxed">{p.desc}</p>
@@ -463,7 +463,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
                         </div>
                       </div>
 
-                      {(selectedProduct.id >= 1 && selectedProduct.id <= 3) && (
+                      {(selectedProduct.id >= 2 && selectedProduct.id <= 3) && (
                         <div className="w-full p-6 md:p-12 border-t border-[#f0f0f0] bg-white">
                           <div className="text-center mb-10">
                             <h4 className="font-['Pretendard',sans-serif] font-bold text-2xl md:text-3xl text-[#09090a] mb-3">
@@ -572,7 +572,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
                         </div>
                       </div>
 
-                      {(selectedProduct.id >= 1 && selectedProduct.id <= 3) && (
+                      {(selectedProduct.id >= 2 && selectedProduct.id <= 3) && (
                         <div className="w-full p-6 md:p-12 border-t border-[#f0f0f0] bg-white">
                           <div className="text-center mb-10">
                             <h4 className="font-['Pretendard',sans-serif] font-bold text-2xl md:text-3xl text-[#09090a] mb-3">

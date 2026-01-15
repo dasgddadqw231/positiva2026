@@ -124,7 +124,7 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' }) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className={`flex flex-col w-full pointer-events-auto ${!slides[current].title.EN ? 'invisible' : ''} ${current === 3 ? 'absolute inset-0' : 'gap-[16px]'}`}
         >
-          <h1 className={`font-['Gotham',sans-serif] font-bold md:text-[56px] leading-none text-white uppercase w-full md:whitespace-nowrap ${current === 0 ? 'text-[28px] tracking-[-1px] md:tracking-[-1.12px]' : 'text-4xl tracking-[-1.12px]'} ${current === 3 ? 'absolute top-[38%] w-full text-center !normal-case !tracking-normal !font-black !text-[34px] md:!text-[80px] whitespace-nowrap' : ''}`}>
+          <h1 className={`font-['Gotham',sans-serif] font-bold md:text-[56px] leading-none text-white uppercase w-full md:whitespace-nowrap ${current === 0 ? 'text-[28px] tracking-[-1px] md:tracking-[-1.12px]' : 'text-4xl tracking-[-1.12px]'} ${current === 3 ? 'absolute top-[38%] w-full text-center !normal-case !tracking-[-0.02em] !font-black !text-[33px] md:!text-[80px] whitespace-nowrap' : ''}`}>
             {current === 0 ? (
               <>100% Organic<br className="md:hidden" /> Extra Virgin Olive Oil</>
             ) : (
@@ -138,8 +138,15 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' }) {
 
         <motion.button
           onClick={(e) => {
-            const nextSection = e.currentTarget.closest('section')?.nextElementSibling;
-            nextSection?.scrollIntoView({ behavior: 'smooth' });
+            if (current < 3) {
+              // Slides 1, 2, 3 (indices 0, 1, 2) -> Anchor to #product
+              const productSection = document.getElementById('product');
+              productSection?.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              // Slide 4 (index 3) -> Default (next section)
+              const nextSection = e.currentTarget.closest('section')?.nextElementSibling;
+              nextSection?.scrollIntoView({ behavior: 'smooth' });
+            }
           }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

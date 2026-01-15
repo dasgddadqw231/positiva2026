@@ -18,7 +18,7 @@ export function AboutSection({ lang }: { lang: 'KR' | 'EN' }) {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           whileHover={{ y: -5 }}
-          className="order-1 relative w-full mb-6 bg-white/95 backdrop-blur-sm p-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] z-20 text-center space-y-4 rounded-sm md:absolute md:top-12 md:left-12 md:w-auto md:max-w-[700px] md:mb-0 md:order-none"
+          className="order-1 relative w-full mb-6 bg-white/95 backdrop-blur-sm px-3 py-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] z-20 text-center space-y-4 rounded-sm md:absolute md:top-12 md:left-12 md:w-auto md:max-w-[700px] md:mb-0 md:order-none"
         >
           <h3 className="font-['Pretendard',sans-serif] font-bold text-2xl md:text-4xl text-[#09090a]">
             {lang === 'KR' ? 'POSITIVA 브랜드 소개' : 'POSITIVA Brand Intro'}
@@ -36,13 +36,14 @@ export function AboutSection({ lang }: { lang: 'KR' | 'EN' }) {
             <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
           </div>
 
-          <div className="absolute inset-0 flex flex-col justify-center items-start px-10 md:px-[160px] gap-8 md:gap-[60px]">
+          <div className="absolute inset-0 flex flex-col justify-center items-start px-4 md:px-[160px] gap-8 md:gap-[60px]">
             <h2 className="font-['Pretendard',sans-serif] font-bold text-2xl md:text-[40px] leading-snug md:leading-[1.3] text-white max-w-2xl">
               {lang === 'KR' ? (
                 <>
-                  스페인 올리브 밭에서 시작된 <br className="hidden md:block" />
-                  POSITIVA의 이야기. <br className="hidden md:block" />
-                  올리브가 자라는 환경 그대로를 담아냅니다.
+                  스페인 올리브 밭에서 시작된 <br />
+                  POSITIVA의 이야기 <br />
+                  올리브가 자라는 환경 <br />
+                  그대로를 담아냅니다
                 </>
               ) : (
                 <>

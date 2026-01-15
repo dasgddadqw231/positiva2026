@@ -77,7 +77,7 @@ export function News({ lang }: { lang: 'KR' | 'EN' }) {
 
   return (
     <section id="news" className="py-20 md:py-[120px] bg-white text-[#09090a]">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-[60px] space-y-20">
+      <div className="max-w-[1440px] mx-auto px-3 md:px-[60px] space-y-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
