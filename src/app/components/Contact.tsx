@@ -39,7 +39,7 @@ export function Contact({ lang }: { lang: 'KR' | 'EN' }) {
               <Mail className="w-5 h-5 text-[#09090a]" />
             </div>
             <div>
-              <p className="font-['Gotham',sans-serif] font-bold text-sm text-[#09090a] uppercase tracking-wider mb-2">Email</p>
+              <p className="font-['Gotham',sans-serif] font-bold text-sm text-[#09090a] uppercase tracking-wider mb-2">Email <span className="font-['Pretendard',sans-serif] text-[#858588] normal-case tracking-normal">{lang === 'KR' ? '(비즈니스 제안)' : '(Business Inquiries)'}</span></p>
               <a href="mailto:daeatrading@naver.com" className="font-['Pretendard',sans-serif] text-[16px] text-[#858588] hover:text-[#09090a] transition-colors break-all">
                 daeatrading@naver.com
               </a>

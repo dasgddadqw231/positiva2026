@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import imgNews1 from "../../assets/images/news/news1.png";
-import imgNews2 from "../../assets/images/news/news2.png";
-import imgNews3 from "../../assets/images/news/news3.png";
+import imgNews1 from "../../assets/images/news/news1_v2.jpg";
+import imgNews2 from "../../assets/images/news/news2_v2.jpg";
+import imgNews3 from "../../assets/images/news/news3_v2.jpg";
 import imgNews4 from "../../assets/images/news/news4.png";
 import imgNews5 from "../../assets/images/news/news5.png";
 import imgNews6 from "../../assets/images/news/news6.jpg";
@@ -160,13 +160,16 @@ export function News({ lang }: { lang: 'KR' | 'EN' }) {
                     {selectedNews.title}
                   </h3>
                   <p className="font-['Pretendard',sans-serif] text-sm text-[#858588]">{selectedNews.date}</p>
+                  <p className="font-['Pretendard',sans-serif] text-base text-[#09090a] leading-relaxed mt-6 whitespace-pre-wrap">
+                    {selectedNews.content}
+                  </p>
                 </div>
 
-                <div className="w-full flex-1 bg-[#F5F5F7] min-h-[400px] relative">
+                <div className="w-full bg-white pb-12 px-8 md:px-12">
                   <img
                     src={selectedNews.image}
                     alt={selectedNews.title}
-                    className="w-full h-full object-contain"
+                    className="w-full h-auto rounded-lg shadow-sm"
                   />
                 </div>
               </div>

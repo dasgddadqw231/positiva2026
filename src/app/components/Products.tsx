@@ -208,7 +208,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
               initial={{ opacity: 0, scale: 0.95, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 pb-[80px] md:p-4 pointer-events-none"
+              className="fixed inset-0 z-50 flex items-center justify-center px-1 py-4 pb-[80px] md:p-4 pointer-events-none"
             >
               <div className="bg-[#fffcf3] w-full max-w-4xl max-h-[calc(100vh-100px)] md:max-h-[90vh] overflow-hidden rounded-lg shadow-2xl pointer-events-auto flex flex-col relative">
                 <button
@@ -232,11 +232,16 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
                       </div>
                     </div>
 
-                    <div className="w-full md:w-1/2 p-6 md:p-12 flex flex-col justify-center space-y-8">
+                    <div className="w-full md:w-1/2 px-2 py-6 md:p-12 flex flex-col justify-center space-y-8">
                       <div>
                         <span className="font-['Gotham',sans-serif] font-bold text-[#fcda2c] tracking-widest block mb-2">PRODUCT DETAIL</span>
                         <h3 className="font-['Pretendard',sans-serif] font-bold text-2xl md:text-3xl text-[#09090a] leading-tight">
-                          {selectedProduct.title}
+                          {lang === 'KR' && selectedProduct.title.includes('유기농 엑스트라버진') ? (
+                            <>
+                              유기농 엑스트라버진<br className="md:hidden" />
+                              {selectedProduct.title.replace('유기농 엑스트라버진', '')}
+                            </>
+                          ) : selectedProduct.title}
                         </h3>
                       </div>
 
@@ -268,7 +273,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
                           POSITIVA 올리브오일, POSITIVA 올레샷
                         </span>
                       </div>
-                      <div className="flex flex-col md:flex-row gap-6 items-stretch bg-white p-6 rounded-lg">
+                      <div className="flex flex-col md:flex-row gap-6 items-stretch bg-white p-1 md:p-6 rounded-lg">
                         <div className="w-full md:w-1/2 min-h-[220px] bg-gray-200 rounded-md overflow-hidden relative">
                           <img src={imgVidoria} className="absolute inset-0 w-full h-full object-cover" alt="Vidoria History" />
                         </div>
@@ -301,7 +306,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
                           POSITIVA Olive Oil, POSITIVA Oleo Shot
                         </span>
                       </div>
-                      <div className="flex flex-col md:flex-row gap-6 items-stretch bg-white p-6 rounded-lg">
+                      <div className="flex flex-col md:flex-row gap-6 items-stretch bg-white p-1 md:p-6 rounded-lg">
                         <div className="w-full md:w-1/2 min-h-[220px] bg-gray-200 rounded-md overflow-hidden relative">
                           <img src={imgVidoria} className="absolute inset-0 w-full h-full object-cover" alt="Vidoria History" />
                         </div>
@@ -334,7 +339,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
                           POSITIVA 올토샷
                         </span>
                       </div>
-                      <div className="flex flex-col md:flex-row gap-6 items-stretch bg-white p-6 rounded-lg">
+                      <div className="flex flex-col md:flex-row gap-6 items-stretch bg-white p-1 md:p-6 rounded-lg">
                         <div className="w-full md:w-1/2 min-h-[220px] bg-gray-200 rounded-md overflow-hidden relative">
                           <img src={imgOleofer} className="absolute inset-0 w-full h-full object-cover" alt="Oleofer History" />
                         </div>

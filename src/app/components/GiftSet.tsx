@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import imgGift2 from "../../assets/images/gift/gift_set_2.png";
 import imgGift4 from "../../assets/images/gift/gift_set_4.png";
@@ -9,7 +9,7 @@ type Gift = {
     image: string;
     title: string;
     composition: string;
-    detail: string;
+    detail: string | ReactNode;
 };
 
 export function GiftSet({ lang }: { lang: 'KR' | 'EN' }) {
@@ -22,7 +22,7 @@ export function GiftSet({ lang }: { lang: 'KR' | 'EN' }) {
             title: lang === 'KR' ? "POSITIVA 2입 선물세트" : "POSITIVA 2-Piece Gift Set",
             composition: lang === 'KR' ? "(구성 : 올리브오일+올레샷)" : "(Composition : Olive Oil + Ole Shot)",
             detail: lang === 'KR'
-                ? "최상급 엑스트라버진 올리브오일과 상큼한 올레샷으로 구성된 실속 선물세트입니다."
+                ? <>최상급 엑스트라버진 올리브오일과 상큼한 올레샷으로 구성된<br />실속 선물세트입니다.</>
                 : "A practical gift set consisting of premium extra virgin olive oil and refreshing Ole Shot."
         },
         {
@@ -31,7 +31,7 @@ export function GiftSet({ lang }: { lang: 'KR' | 'EN' }) {
             title: lang === 'KR' ? "POSITIVA 4입 선물세트" : "POSITIVA 4-Piece Gift Set",
             composition: lang === 'KR' ? "(구성 : 올리브오일 2입+올레샷 2입)" : "(Composition : Olive Oil 2pcs + Ole Shot 2pcs)",
             detail: lang === 'KR'
-                ? "풍성한 구성으로 감사의 마음을 전하기 좋은 프리미엄 4입 선물세트입니다."
+                ? <>풍성한 구성으로 감사의 마음을 전하기 좋은 프리미엄 4입<br />선물세트입니다.</>
                 : "A premium 4-piece gift set perfect for expressing gratitude with a generous composition."
         },
         {
