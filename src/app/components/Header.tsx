@@ -34,12 +34,16 @@ export function Header({ lang, setLang }: { lang: 'KR' | 'EN', setLang: (lang: '
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
-          {navItems.map((item) => (
-            <a key={item} href={`#${item.toLowerCase()}`} className="font-['Pretendard',sans-serif] font-semibold text-sm tracking-widest text-[#09090a] hover:opacity-60 transition-opacity">
-              {item}
-            </a>
-          ))}
+        <nav className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2">
+          <ul className="flex items-center gap-10">
+            {navItems.map((item) => (
+              <li key={item}>
+                <a href={`#${item.toLowerCase()}`} className="font-['Pretendard',sans-serif] font-semibold text-sm tracking-widest text-[#09090a] hover:opacity-60 transition-opacity">
+                  {item}
+                </a>
+              </li>
+            ))}
+          </ul>
         </nav>
 
         <div className="flex items-center gap-6 z-50">
@@ -79,17 +83,20 @@ export function Header({ lang, setLang }: { lang: 'KR' | 'EN', setLang: (lang: '
             transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-white z-40 pt-[100px] px-6 lg:hidden"
           >
-            <nav className="flex flex-col items-center gap-8">
-              {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  onClick={() => setIsOpen(false)}
-                  className="font-['Gotham',sans-serif] font-bold text-2xl tracking-widest text-[#09090a] hover:text-[#fcda2c] transition-colors"
-                >
-                  {item}
-                </a>
-              ))}
+            <nav>
+              <ul className="flex flex-col items-center gap-8">
+                {navItems.map((item) => (
+                  <li key={item}>
+                    <a
+                      href={`#${item.toLowerCase()}`}
+                      onClick={() => setIsOpen(false)}
+                      className="font-['Gotham',sans-serif] font-bold text-2xl tracking-widest text-[#09090a] hover:text-[#fcda2c] transition-colors"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </nav>
           </motion.div>
         )}
