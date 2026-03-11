@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Instagram, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
-export function Contact({ lang }: { lang: 'KR' | 'EN' }) {
+export function Contact({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
   return (
     <section id="contact" className="relative py-20 md:py-[120px] bg-white overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 space-y-16 md:space-y-24">
@@ -22,7 +22,9 @@ export function Contact({ lang }: { lang: 'KR' | 'EN' }) {
             <p className="font-['Pretendard',sans-serif] font-medium text-lg md:text-[20px] text-[#47484c] w-full break-keep leading-relaxed">
               {lang === 'KR'
                 ? "POSITIVA의 프리미엄 올리브 오일에 대해 궁금한 점이 있으시다면 언제든 문의해 주세요."
-                : "If you have any questions about POSITIVA's premium olive oil, please feel free to contact us."}
+                : lang === 'TH'
+                  ? "หากมีคำถามเกี่ยวกับน้ำมันมะกอกพรีเมียมของ POSITIVA สอบถามเราได้เสมอ"
+                  : "If you have any questions about POSITIVA's premium olive oil, please feel free to contact us."}
             </p>
           </div>
         </motion.div>
@@ -39,7 +41,7 @@ export function Contact({ lang }: { lang: 'KR' | 'EN' }) {
               <Mail className="w-5 h-5 text-[#09090a]" />
             </div>
             <div>
-              <p className="font-['Gotham',sans-serif] font-bold text-sm text-[#09090a] uppercase tracking-wider mb-2">Email <span className="font-['Pretendard',sans-serif] text-[#858588] normal-case tracking-normal">{lang === 'KR' ? '(비즈니스 제안)' : '(Business Inquiries)'}</span></p>
+              <p className="font-['Gotham',sans-serif] font-bold text-sm text-[#09090a] uppercase tracking-wider mb-2">Email <span className="font-['Pretendard',sans-serif] text-[#858588] normal-case tracking-normal">{lang === 'KR' ? '(비즈니스 제안)' : lang === 'TH' ? '(สอบถามธุรกิจ)' : '(Business Inquiries)'}</span></p>
               <a href="mailto:daeatrading@naver.com" className="font-['Pretendard',sans-serif] text-[16px] text-[#858588] hover:text-[#09090a] transition-colors break-all">
                 daeatrading@naver.com
               </a>
@@ -67,7 +69,9 @@ export function Contact({ lang }: { lang: 'KR' | 'EN' }) {
               <p className="font-['Pretendard',sans-serif] text-[15px] text-[#858588] tracking-tighter leading-snug">
                 {lang === 'KR'
                   ? <>서울특별시 강남구 봉은사로 524<br /><span className="whitespace-nowrap">(코엑스 인터콘티넨탈서울) 비2층 200-10호</span></>
-                  : "200-10, B2, 524, Bongeunsa-ro, Gangnam-gu, Seoul, Republic of Korea"}
+                  : lang === 'TH'
+                    ? "200-10, B2, 524 Bongeunsa-ro, Gangnam-gu, Seoul, South Korea"
+                    : "200-10, B2, 524, Bongeunsa-ro, Gangnam-gu, Seoul, Republic of Korea"}
               </p>
             </div>
           </div>

@@ -14,6 +14,7 @@ import img20260105654321 from "figma:asset/32fffddfc763fbd91ac83974fc7fe6bb9ac0f
 import img20260105653351 from "figma:asset/bd9866b3cd3f5d1d88c1a63fd0fd97da6a15a0d9.png";
 import imgLogo from "figma:asset/e299c2ecaa3cfab3b0571081944559786388ed48.png";
 import { imgColor } from "./svg-8araj";
+import imgAlbumin from "./albumin.png";
 
 function Gradient() {
   return (
@@ -574,12 +575,72 @@ function Frame26() {
   );
 }
 
+function Frame74() {
+  return (
+    <div className="h-[520px] overflow-clip relative shrink-0 w-full">
+      <div className="absolute left-1/2 size-[520px] top-1/2 translate-x-[-50%] translate-y-[-50%]">
+        <img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgAlbumin} />
+      </div>
+    </div>
+  );
+}
+
+function Frame75() {
+  return (
+    <div className="content-stretch flex flex-col gap-[4px] items-start not-italic relative shrink-0 w-full">
+      <p className="font-['Pretendard:Bold',sans-serif] leading-[1.4] relative shrink-0 text-[#09090a] text-[20px] tracking-[-0.24px] w-full">바이오티바 마시는 알부민 데일리 파워샷</p>
+      <p className="font-['Pretendard:Regular',sans-serif] leading-[1.429] relative shrink-0 text-[#858588] text-[14px] tracking-[0.203px] w-full">
+        지친 일상을 깨우는 고농축 에너지 파워샷
+        <br aria-hidden="true" />
+        프랑스산 난백알부민 98%와 5가지 활력 부스터 배합
+      </p>
+    </div>
+  );
+}
+
+function Frame76() {
+  return (
+    <div className="content-stretch flex items-center justify-between relative shrink-0 w-full">
+      <div className="content-stretch flex font-['Gotham:Bold',sans-serif] gap-[4px] items-center leading-[1.334] not-italic relative shrink-0 text-[#09090a] text-nowrap">
+        <span />
+      </div>
+      <div className="content-stretch flex items-center justify-center relative rounded-[1000px] shrink-0 size-[52px]">
+        <div aria-hidden="true" className="absolute border border-[#e8e9ea] border-solid inset-0 pointer-events-none rounded-[1000px]" />
+        <Component5 />
+      </div>
+    </div>
+  );
+}
+
+function Frame77() {
+  return (
+    <div className="relative shrink-0 w-full">
+      <div className="size-full">
+        <div className="content-stretch flex flex-col gap-[16px] items-start px-[8px] py-0 relative w-full">
+          <Frame75 />
+          <Frame76 />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Frame78() {
+  return (
+    <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-[520px]">
+      <Frame74 />
+      <Frame77 />
+    </div>
+  );
+}
+
 function Frame27() {
   return (
-    <div className="content-stretch flex gap-[80px] items-center justify-center overflow-clip relative shrink-0 w-full">
+    <div className="content-stretch flex flex-wrap gap-[80px] items-start justify-center relative shrink-0 w-full">
       <Frame14 />
       <Frame25 />
       <Frame26 />
+      <Frame78 />
     </div>
   );
 }

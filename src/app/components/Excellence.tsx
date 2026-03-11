@@ -5,7 +5,7 @@ import imgTopRight from "../../assets/images/section2/image2.png"; // Top Right
 import imgBottomLeft from "../../assets/images/section2/image3.png"; // Bottom Left
 import imgBottomRight from "../../assets/images/section2/image4.png"; // Bottom Right
 
-export function Excellence({ lang }: { lang: 'KR' | 'EN' }) {
+export function Excellence({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
   return (
     <section className="relative py-20 md:pt-[120px] md:pb-[300px] bg-white overflow-hidden">
       {/* Top Left Image */}
@@ -70,6 +70,8 @@ export function Excellence({ lang }: { lang: 'KR' | 'EN' }) {
           <p className="font-['Pretendard',sans-serif] font-bold text-xl md:text-[24px] text-[#09090a]">
             {lang === 'KR'
               ? "한 방울까지 완성도를 고민하는 POSITIVA"
+              : lang === 'TH'
+              ? "POSITIVA ใส่ใจทุกหยด เพื่อความสมบูรณ์แบบ"
               : "POSITIVA, obsessing over perfection in every drop."}
           </p>
           <div className="font-['Pretendard',sans-serif] font-medium text-base md:text-[16px] text-[#47484c] leading-relaxed">
@@ -77,6 +79,11 @@ export function Excellence({ lang }: { lang: 'KR' | 'EN' }) {
               <>
                 <p>자연이 만든 흐름과 시간을 따라 올리브의 맛을 담아냅니다.</p>
                 <p>한 방울에 집중해, 불필요한 것은 덜어냈습니다.</p>
+              </>
+            ) : lang === 'TH' ? (
+              <>
+                <p>เราถ่ายทอดรสชาติของมะกอกตามธรรมชาติและกาลเวลา</p>
+                <p>เน้นทุกหยด ตัดสิ่งที่ไม่จำเป็นออก</p>
               </>
             ) : (
               <>

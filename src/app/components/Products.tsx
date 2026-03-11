@@ -14,17 +14,19 @@ type Product = {
   detail: ReactNode;
 };
 
-export function Products({ lang }: { lang: 'KR' | 'EN' }) {
+export function Products({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const products: Product[] = [
     {
       id: 1,
       image: imgProduct1,
-      title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 100%" : "Organic Extra Virgin Olive Oil 100%",
+      title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 100%" : lang === 'TH' ? "น้ำมันมะกอก Extra Virgin ออร์แกนิก 100%" : "Organic Extra Virgin Olive Oil 100%",
       desc: lang === 'KR'
         ? <>산도 0.19 프리미엄 엑스트라버진 올리브오일<br />스페인 아르베키나 품종</>
-        : <>Acidity 0.19 Premium Extra Virgin Olive Oil<br />Spanish Arbequina Variety</>,
+        : lang === 'TH'
+          ? <>น้ำมันมะกอก Extra Virgin พรีเมียม ความเป็นกรด 0.19<br />พันธุ์ Arbequina จากสเปน</>
+          : <>Acidity 0.19 Premium Extra Virgin Olive Oil<br />Spanish Arbequina Variety</>,
       detail: lang === 'KR'
         ? (
           <div className="flex flex-col gap-4">
@@ -57,10 +59,12 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
     {
       id: 2,
       image: imgProduct2,
-      title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 레몬 올레샷" : "Organic Extra Virgin Olive Oil Lemon Ole Shot",
+      title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 레몬 올레샷" : lang === 'TH' ? "โอเล่ช็อต น้ำมันมะกอก Extra Virgin ออร์แกนิกผสมเลมอน" : "Organic Extra Virgin Olive Oil Lemon Ole Shot",
       desc: lang === 'KR'
         ? <>화제의 아이템! 최적의 황금 비율 올레샷<br />스페인 아르베키나 품종 (올리브오일 65%, 레몬35%)</>
-        : <>Hot Item! Optimal Golden Ratio Oleo Shot<br />Spanish Arbequina Variety (Olive Oil 65%, Lemon 35%)</>,
+        : lang === 'TH'
+          ? <>ไอเทมฮิต! โอเล่ช็อตสูตรโกลเด้นเรโช<br />พันธุ์ Arbequina (น้ำมันมะกอก 65%, เลมอน 35%)</>
+          : <>Hot Item! Optimal Golden Ratio Oleo Shot<br />Spanish Arbequina Variety (Olive Oil 65%, Lemon 35%)</>,
       detail: lang === 'KR'
         ? (
           <div className="flex flex-col gap-4">
@@ -100,10 +104,12 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
     {
       id: 3,
       image: imgProduct3,
-      title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 토마토 올토샷" : "Organic Extra Virgin Olive Oil Tomato Ole Shot",
+      title: lang === 'KR' ? "유기농 엑스트라버진 올리브오일 토마토 올토샷" : lang === 'TH' ? "โอลโต้ช็อต น้ำมันมะกอก Extra Virgin ออร์แกนิกผสมมะเขือเทศ" : "Organic Extra Virgin Olive Oil Tomato Ole Shot",
       desc: lang === 'KR'
         ? <>올리브오일과 토마토를 블렌딩하여 가볍게 즐기는 올토샷<br />스페인 피쿠알 품종 (올리브오일 40%, 토마토 60%)</>
-        : <>Oltoshot lightly enjoyed by blending olive oil and tomato<br />Spanish Picual Variety (Olive Oil 40%, Tomato 60%)</>,
+        : lang === 'TH'
+          ? <>โอลโต้ช็อตเบาๆ จากน้ำมันมะกอกและมะเขือเทศ<br />พันธุ์ Picual (น้ำมันมะกอก 40%, มะเขือเทศ 60%)</>
+          : <>Oltoshot lightly enjoyed by blending olive oil and tomato<br />Spanish Picual Variety (Olive Oil 40%, Tomato 60%)</>,
       detail: lang === 'KR'
         ? (
           <div className="flex flex-col gap-4">
@@ -139,7 +145,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
           </div>
         )
         : "Rich lycopene from ripe tomatoes meets olive oil for increased absorption. Pair with a light brunch or toast to experience the healthiness of the Mediterranean diet."
-    }
+    },
   ];
 
   return (
@@ -160,6 +166,10 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
             {lang === 'KR' ? (
               <>
                 유기농 단일 품종 올리브로 만든<br />일상에 자연스럽게 쓰이는 POSITIVA의 올리브오일
+              </>
+            ) : lang === 'TH' ? (
+              <>
+                ทำจากมะกอกออร์แกนิกพันธุ์เดียว<br />น้ำมันมะกอก POSITIVA สำหรับทุกวัน
               </>
             ) : (
               <>
@@ -247,14 +257,14 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
 
                       <div className="space-y-6">
                         <div>
-                          <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '상품 소개' : 'Description'}</h4>
+                          <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '상품 소개' : lang === 'TH' ? 'รายละเอียดสินค้า' : 'Description'}</h4>
                           <p className="font-['Pretendard',sans-serif] font-medium text-[#555] leading-relaxed break-keep">
                             {selectedProduct.desc}
                           </p>
                         </div>
 
                         <div>
-                          <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '상세 정보' : 'Detail'}</h4>
+                          <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '상세 정보' : lang === 'TH' ? 'ข้อมูลเพิ่มเติม' : 'Detail'}</h4>
                           <div className="font-['Pretendard',sans-serif] font-regular text-[#555] leading-relaxed text-sm break-keep">
                             {selectedProduct.detail}
                           </div>
@@ -389,7 +399,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
                     </div>
                   )}
 
-                  {lang === 'KR' && (
+                  {lang === 'KR' && selectedProduct.id <= 3 && (
                     <>
                       <div className="w-full p-6 md:p-12 border-t border-[#f0f0f0] bg-white">
 
@@ -502,7 +512,7 @@ export function Products({ lang }: { lang: 'KR' | 'EN' }) {
                     </>
                   )}
 
-                  {lang === 'EN' && (
+                  {lang === 'EN' && selectedProduct.id <= 3 && (
                     <>
                       <div className="w-full p-6 md:p-12 border-t border-[#f0f0f0] bg-white">
 

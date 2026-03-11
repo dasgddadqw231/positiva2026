@@ -2,7 +2,9 @@ import { useState, ReactNode } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import imgGift2 from "../../assets/images/gift/gift_set_2.png";
 import imgGift4 from "../../assets/images/gift/gift_set_4.png";
-import imgGiftUpcoming from "../../assets/images/gift/gift_set_upcoming.png";
+import imgGift3 from "../../assets/images/gift/gift_set_3.png";
+import imgGiftNew1 from "../../assets/images/products/product5-gift.png";
+import imgGiftNew2 from "../../assets/images/products/product6-gift.png";
 
 type Gift = {
     id: number;
@@ -12,36 +14,42 @@ type Gift = {
     detail: string | ReactNode;
 };
 
-export function GiftSet({ lang }: { lang: 'KR' | 'EN' }) {
+export function GiftSet({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
     const [selectedGift, setSelectedGift] = useState<Gift | null>(null);
 
     const gifts: Gift[] = [
         {
             id: 1,
-            image: imgGift2,
-            title: lang === 'KR' ? "POSITIVA 2입 선물세트" : "POSITIVA 2-Piece Gift Set",
-            composition: lang === 'KR' ? "(구성 : 올리브오일+올레샷)" : "(Composition : Olive Oil + Ole Shot)",
+            image: imgGiftNew1,
+            title: lang === 'KR' ? "POSITIVA 2입 선물세트" : lang === 'TH' ? "เซตของขวัญ POSITIVA 2 ชิ้น" : "POSITIVA 2-Piece Gift Set",
+            composition: lang === 'KR' ? "(구성 : 올리브오일+올레샷)" : lang === 'TH' ? "(ประกอบด้วย: น้ำมันมะกอก + Oleo Shot)" : "(Composition : Olive Oil + Ole Shot)",
             detail: lang === 'KR'
                 ? <>최상급 엑스트라버진 올리브오일과 상큼한 올레샷으로 구성된<br />실속 선물세트입니다.</>
-                : "A practical gift set consisting of premium extra virgin olive oil and refreshing Ole Shot."
+                : lang === 'TH'
+                    ? "เซตของขวัญสุดคุ้มประกอบด้วยน้ำมันมะกอก Extra Virgin คุณภาพสูงและ Oleo Shot รสสดชื่น"
+                    : "A practical gift set consisting of premium extra virgin olive oil and refreshing Ole Shot."
         },
         {
             id: 2,
-            image: imgGift4,
-            title: lang === 'KR' ? "POSITIVA 4입 선물세트" : "POSITIVA 4-Piece Gift Set",
-            composition: lang === 'KR' ? "(구성 : 올리브오일 2입+올레샷 2입)" : "(Composition : Olive Oil 2pcs + Ole Shot 2pcs)",
+            image: imgGiftNew2,
+            title: lang === 'KR' ? "POSITIVA 4입 선물세트" : lang === 'TH' ? "เซตของขวัญ POSITIVA 4 ชิ้น" : "POSITIVA 4-Piece Gift Set",
+            composition: lang === 'KR' ? "(구성 : 올리브오일 2입+올레샷 2입)" : lang === 'TH' ? "(ประกอบด้วย: น้ำมันมะกอก 2 ขวด + Oleo Shot 2 ขวด)" : "(Composition : Olive Oil 2pcs + Ole Shot 2pcs)",
             detail: lang === 'KR'
                 ? <>풍성한 구성으로 감사의 마음을 전하기 좋은 프리미엄 4입<br />선물세트입니다.</>
-                : "A premium 4-piece gift set perfect for expressing gratitude with a generous composition."
+                : lang === 'TH'
+                    ? "เซตของขวัญพรีเมียม 4 ชิ้น เหมาะสำหรับมอบความประทับใจ"
+                    : "A premium 4-piece gift set perfect for expressing gratitude with a generous composition."
         },
         {
             id: 3,
-            image: imgGiftUpcoming,
-            title: "Upcoming",
-            composition: lang === 'KR' ? "(구성 : 올레샷+올토샷)" : "(Composition : Ole Shot + Ole To Shot)",
+            image: imgGift3,
+            title: lang === 'KR' ? "POSITIVA 2입 선물세트" : lang === 'TH' ? "เซตของขวัญ POSITIVA 2 ชิ้น" : "POSITIVA 2-Piece Gift Set",
+            composition: lang === 'KR' ? "(구성 : 올레샷+올토샷)" : lang === 'TH' ? "(ประกอบด้วย: Oleo Shot + Olto Shot)" : "(Composition : Ole Shot + Ole To Shot)",
             detail: lang === 'KR'
                 ? "새로운 조합으로 찾아뵐 예정입니다."
-                : "Coming soon with a new combination."
+                : lang === 'TH'
+                    ? "เร็วๆ นี้ กับสูตรผสมใหม่"
+                    : "Coming soon with a new combination."
         }
     ];
 
@@ -60,7 +68,7 @@ export function GiftSet({ lang }: { lang: 'KR' | 'EN' }) {
                         <h2 className="font-['Gotham',sans-serif] font-bold text-3xl md:text-[60px] text-[#09090a]">POSITIVA Gift Set Collection</h2>
                     </div>
                     <p className="font-['Pretendard',sans-serif] font-bold text-lg md:text-[24px] text-[#09090a]">
-                        {lang === 'KR' ? "소중한분께 선물하기 좋은 POSITIVA 선물세트" : "POSITIVA Gift Set, perfect for gifting to your loved ones"}
+                        {lang === 'KR' ? "소중한분께 선물하기 좋은 POSITIVA 선물세트" : lang === 'TH' ? "เซตของขวัญ POSITIVA เหมาะสำหรับมอบให้คนพิเศษ" : "POSITIVA Gift Set, perfect for gifting to your loved ones"}
                     </p>
                 </motion.div>
 
@@ -135,14 +143,14 @@ export function GiftSet({ lang }: { lang: 'KR' | 'EN' }) {
 
                                     <div className="space-y-6">
                                         <div>
-                                            <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '구성품' : 'Composition'}</h4>
+                                            <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '구성품' : lang === 'TH' ? 'ส่วนประกอบ' : 'Composition'}</h4>
                                             <p className="font-['Pretendard',sans-serif] font-medium text-[#555] leading-relaxed">
                                                 {selectedGift.composition}
                                             </p>
                                         </div>
 
                                         <div>
-                                            <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '상세 설명' : 'Detail'}</h4>
+                                            <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '상세 설명' : lang === 'TH' ? 'รายละเอียด' : 'Detail'}</h4>
                                             <p className="font-['Pretendard',sans-serif] font-regular text-[#555] leading-relaxed text-sm">
                                                 {selectedGift.detail}
                                             </p>

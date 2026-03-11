@@ -1,8 +1,10 @@
 import React from "react";
 import { Instagram, Phone, Mail } from "lucide-react";
 
-export function MobileBottomNav({ lang }: { lang: 'KR' | 'EN' }) {
+export function MobileBottomNav({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
     const instagramLink = lang === 'KR'
+        ? "https://instagram.com/positiva_kor"
+        : lang === 'TH'
         ? "https://instagram.com/positiva_kor"
         : "https://instagram.com/positiva_usa";
 

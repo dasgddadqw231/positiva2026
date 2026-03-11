@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import imgLogo from "../../assets/images/LOGO.png";
 
-export function Header({ lang, setLang }: { lang: 'KR' | 'EN', setLang: (lang: 'KR' | 'EN') => void }) {
+export function Header({ lang, setLang }: { lang: 'KR' | 'EN' | 'TH', setLang: (lang: 'KR' | 'EN' | 'TH') => void }) {
   const [isOpen, setIsOpen] = useState(false);
 
   // Lock body scroll when menu is open
@@ -60,6 +60,13 @@ export function Header({ lang, setLang }: { lang: 'KR' | 'EN', setLang: (lang: '
               className={`font-['Gotham',sans-serif] font-bold text-[13px] transition-colors ${lang === 'EN' ? 'text-[#09090a]' : 'text-[#858588] hover:text-[#09090a]'}`}
             >
               EN
+            </button>
+            <span className="text-[#e8e9ea]">|</span>
+            <button
+              onClick={() => setLang('TH')}
+              className={`font-['Gotham',sans-serif] font-bold text-[13px] transition-colors ${lang === 'TH' ? 'text-[#09090a]' : 'text-[#858588] hover:text-[#09090a]'}`}
+            >
+              TH
             </button>
           </div>
 

@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import { Excellence } from "./components/Excellence";
 import { AboutSection } from "./components/AboutSection";
 import { Products } from "./components/Products";
+import { HealthSection } from "./components/HealthSection";
 import { GiftSet } from "./components/GiftSet";
 import { Standard } from "./components/Standard";
 import { StoreBanner } from "./components/StoreBanner";
@@ -13,16 +14,17 @@ import { Footer } from "./components/Footer";
 import { MobileBottomNav } from "./components/MobileBottomNav";
 
 export default function App() {
-  const [lang, setLang] = React.useState<'KR' | 'EN'>('KR');
+  const [lang, setLang] = React.useState<'KR' | 'EN' | 'TH'>('KR');
 
   return (
-    <div className="min-h-screen bg-white selection:bg-[#fcda2c] selection:text-black">
+    <div className={`min-h-screen bg-white selection:bg-[#fcda2c] selection:text-black${lang === 'TH' ? ' thai-mode' : ''}`}>
       <Header lang={lang} setLang={setLang} />
       <main>
         <Hero lang={lang} />
         <Excellence lang={lang} />
         <AboutSection lang={lang} />
         <Products lang={lang} />
+        <HealthSection lang={lang} />
         <GiftSet lang={lang} />
         <Standard lang={lang} />
         <StoreBanner lang={lang} />

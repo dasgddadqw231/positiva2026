@@ -13,7 +13,7 @@ import imgSecond from "@/assets/images/hero2.png";
 import imgThird from "@/assets/images/hero3_tomato.png";
 import imgFourth from "@/assets/images/hero4.png";
 
-export function Hero({ lang }: { lang: 'KR' | 'EN' }) {
+export function Hero({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -22,44 +22,52 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' }) {
       image: img811,
       title: {
         EN: "100% Organic Extra Virgin Olive Oil",
-        KR: "100% Organic Extra Virgin Olive Oil"
+        KR: "100% Organic Extra Virgin Olive Oil",
+        TH: "100% Organic Extra Virgin Olive Oil"
       },
       desc: {
         EN: "100% Organic Extra Virgin Olive Oil",
-        KR: "유기농 엑스트라버진 올리브오일 100%"
+        KR: "유기농 엑스트라버진 올리브오일 100%",
+        TH: "น้ำมันมะกอก Extra Virgin ออร์แกนิก 100%"
       }
     },
     {
       image: imgSecond,
       title: {
         EN: "Olive Lemon Shot",
-        KR: "Olive Lemon Shot"
+        KR: "Olive Lemon Shot",
+        TH: "Olive Lemon Shot"
       },
       desc: {
         EN: "Organic Extra Virgin Olive Oil Lemon Oleo Shot",
-        KR: "유기농 엑스트라버진 올리브오일 레몬 올레샷"
+        KR: "유기농 엑스트라버진 올리브오일 레몬 올레샷",
+        TH: "โอเล่ช็อต น้ำมันมะกอก Extra Virgin ออร์แกนิกผสมเลมอน"
       }
     },
     {
       image: imgThird,
       title: {
         EN: "Olive Tomato Shot",
-        KR: "Olive Tomato Shot"
+        KR: "Olive Tomato Shot",
+        TH: "Olive Tomato Shot"
       },
       desc: {
         EN: "Organic Extra Virgin Olive Oil Tomato Oltoshot",
-        KR: "유기농 엑스트라버진 올리브오일 토마토 올토샷"
+        KR: "유기농 엑스트라버진 올리브오일 토마토 올토샷",
+        TH: "โอลโต้ช็อต น้ำมันมะกอก Extra Virgin ออร์แกนิกผสมมะเขือเทศ"
       }
     },
     {
       image: imgFourth,
       title: {
         EN: "“Excellence in Every Drop”",
-        KR: "“Excellence in Every Drop”"
+        KR: "“Excellence in Every Drop”",
+        TH: "“Excellence in Every Drop”"
       },
       desc: {
         EN: "POSITIVA",
-        KR: "POSITIVA"
+        KR: "POSITIVA",
+        TH: "POSITIVA"
       }
     }
   ];
@@ -128,11 +136,11 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' }) {
             {current === 0 ? (
               <>100% Organic<br className="md:hidden" /> Extra Virgin Olive Oil</>
             ) : (
-              slides[current].title.EN ? (lang === 'KR' ? slides[current].title.KR : slides[current].title.EN) : "Placeholder Title"
+              slides[current].title.EN ? (lang === 'KR' ? slides[current].title.KR : lang === 'TH' ? slides[current].title.TH : slides[current].title.EN) : "Placeholder Title"
             )}
           </h1>
           <p className={`font-['Pretendard',sans-serif] font-medium text-lg md:text-[18px] leading-[1.445] tracking-[-0.0036px] text-white ${current === 3 ? 'absolute bottom-[15%] w-full text-center !font-black tracking-[0.1em] !text-[20px] md:!text-[40px] uppercase' : ''}`}>
-            {slides[current].desc.EN ? (lang === 'KR' ? slides[current].desc.KR : slides[current].desc.EN) : "Placeholder Description"}
+            {slides[current].desc.EN ? (lang === 'KR' ? slides[current].desc.KR : lang === 'TH' ? slides[current].desc.TH : slides[current].desc.EN) : "Placeholder Description"}
           </p>
         </motion.div>
 

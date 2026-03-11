@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import svgPaths from "../../imports/svg-6jw7enmxus";
 
-export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
+export function Standard({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
   const values = [
     {
       id: "single-origin",
@@ -17,13 +17,21 @@ export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
         </div>
       ),
       title: "Single Origin",
-      subtitle: lang === 'KR' ? "유기농 단일 품종 원료" : "Organic Single Origin",
+      subtitle: lang === 'KR' ? "유기농 단일 품종 원료" : lang === 'TH' ? "วัตถุดิบพันธุ์เดียวออร์แกนิก" : "Organic Single Origin",
       desc: lang === 'KR' ? (
         <>
           POSITIVA는 스페인 유기농<br />단일 품종 올리브만을 사용해<br />원료의 출처와 기준을 명확히 합니다.
           <span className="block mt-4 text-[13px] font-normal opacity-70">
             - 아르베키나 품종 (올리브오일, 올레샷)<br />
             - 피쿠알 품종 (올토샷)
+          </span>
+        </>
+      ) : lang === 'TH' ? (
+        <>
+          POSITIVA ใช้มะกอกออร์แกนิกพันธุ์เดียวจากสเปน<br />เพื่อความโปร่งใสในแหล่งที่มาของวัตถุดิบ
+          <span className="block mt-4 text-[13px] font-normal opacity-70">
+            - พันธุ์ Arbequina (น้ำมันมะกอก, Oleo Shot)<br />
+            - พันธุ์ Picual (Olto Shot)
           </span>
         </>
       ) : (
@@ -57,13 +65,21 @@ export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
         </div>
       ),
       title: "Clean Process",
-      subtitle: lang === 'KR' ? "본질에 집중한 공정" : "Process Focused on Essence",
+      subtitle: lang === 'KR' ? "본질에 집중한 공정" : lang === 'TH' ? "กระบวนการที่เน้นแก่นแท้" : "Process Focused on Essence",
       desc: lang === 'KR' ? (
         <>
           불필요한 가공을 줄이고<br />올리브 본연의 풍미와 균형을<br />정직하게 담아냅니다.
           <span className="block mt-4 text-[13px] font-normal opacity-70">
             - 100% 유기농 올리브오일<br />
             - 100% 레몬, 100% 토마토 착즙
+          </span>
+        </>
+      ) : lang === 'TH' ? (
+        <>
+          ลดกระบวนการที่ไม่จำเป็น<br />เพื่อถ่ายทอดรสชาติและความสมดุล<br />ที่แท้จริงของมะกอก
+          <span className="block mt-4 text-[13px] font-normal opacity-70">
+            - น้ำมันมะกอกออร์แกนิก 100%<br />
+            - คั้นเลมอนสด 100%, คั้นมะเขือเทศสด 100%
           </span>
         </>
       ) : (
@@ -89,10 +105,14 @@ export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
         </div>
       ),
       title: "Everyday Use",
-      subtitle: lang === 'KR' ? "일상에 맞춘 섭취 방식" : "Tailored for Daily Use",
+      subtitle: lang === 'KR' ? "일상에 맞춘 섭취 방식" : lang === 'TH' ? "เหมาะกับทุกช่วงเวลาของวัน" : "Tailored for Daily Use",
       desc: lang === 'KR' ? (
         <>
           요리부터 데일리 샷까지<br />매일 부담 없이 이어지는<br />올리브 푸드를 제안합니다.
+        </>
+      ) : lang === 'TH' ? (
+        <>
+          ตั้งแต่ประกอบอาหารไปจนถึงการดื่มเป็นช็อต<br />ง่าย ไม่เป็นภาระ เหมาะกับทุกวัน
         </>
       ) : (
         <>
@@ -120,6 +140,10 @@ export function Standard({ lang }: { lang: 'KR' | 'EN' }) {
             {lang === 'KR' ? (
               <>
                 불필요한 것은 덜어내고<br />기준이 되는 것만 남겼습니다.
+              </>
+            ) : lang === 'TH' ? (
+              <>
+                ตัดทิ้งสิ่งที่ไม่จำเป็น<br />เหลือไว้เพียงสิ่งที่ดีที่สุด
               </>
             ) : (
               <>

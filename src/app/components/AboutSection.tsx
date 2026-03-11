@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "motion/react";
 import section3Img from "../../assets/images/about_bg.png";
 
-export function AboutSection({ lang }: { lang: 'KR' | 'EN' }) {
+export function AboutSection({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
   return (
     <section id="brand" className="relative w-full py-20 md:py-[120px] px-6 md:px-[60px] flex justify-center">
       <motion.div
@@ -21,7 +21,7 @@ export function AboutSection({ lang }: { lang: 'KR' | 'EN' }) {
           className="order-1 relative w-full mb-6 bg-white/95 backdrop-blur-sm px-3 py-6 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.08)] z-20 text-center space-y-4 rounded-sm md:absolute md:top-12 md:left-12 md:w-auto md:max-w-[700px] md:mb-0 md:order-none"
         >
           <h3 className="font-['Pretendard',sans-serif] font-bold text-2xl md:text-4xl text-[#09090a]">
-            {lang === 'KR' ? 'POSITIVA 브랜드 소개' : 'POSITIVA Brand Intro'}
+            {lang === 'KR' ? 'POSITIVA 브랜드 소개' : lang === 'TH' ? 'เกี่ยวกับ POSITIVA' : 'POSITIVA Brand Intro'}
           </h3>
           <p className="font-['Pretendard',sans-serif] font-medium text-sm md:text-lg text-[#09090a] leading-relaxed break-keep">
             {lang === 'KR'
@@ -44,6 +44,13 @@ export function AboutSection({ lang }: { lang: 'KR' | 'EN' }) {
                   POSITIVA의 이야기 <br />
                   올리브가 자라는 환경 <br />
                   그대로를 담아냅니다
+                </>
+              ) : lang === 'TH' ? (
+                <>
+                  เรื่องราวของ POSITIVA <br />
+                  เริ่มต้นจากสวนมะกอกในสเปน <br />
+                  บรรจุสภาพแวดล้อมธรรมชาติ <br />
+                  ไว้ทุกหยด
                 </>
               ) : (
                 <>
