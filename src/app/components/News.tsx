@@ -25,7 +25,7 @@ export function News({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
       id: 1,
       image: imgNewsAlbumin,
       title: lang === 'KR' ? "POSITIVA 알부민 출시" : lang === 'TH' ? "เปิดตัว POSITIVA อัลบูมิน" : "POSITIVA Albumin Launch",
-      date: "2026.03.11",
+      date: "2026.03.09",
       content: lang === 'KR'
         ? "바이오티바 마시는 알부민 데일리 파워샷이 출시되었습니다. 프랑스산 난백알부민 97%와 5가지 활력 부스터를 배합한 고농축 에너지 파워샷으로, 지친 일상에 활력을 더해보세요."
         : lang === 'TH'
