@@ -46,7 +46,7 @@ export function GiftSet({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
             title: lang === 'KR' ? "POSITIVA 인기 2입 선물세트" : lang === 'TH' ? "เซตของขวัญ POSITIVA ยอดนิยม 2 ชิ้น" : "POSITIVA Best 2-Piece Gift Set",
             composition: lang === 'KR' ? "(구성 : 올레샷+올토샷)" : lang === 'TH' ? "(ประกอบด้วย: Oleo Shot + Olto Shot)" : "(Composition : Ole Shot + Ole To Shot)",
             detail: lang === 'KR'
-                ? <>포지티바 인기상품으로 구성된 올레+올토 선물세트입니다.<br />레몬 올레샷과 토마토 올토샷의 조합으로 건강한 선물을 전해보세요.</>
+                ? <>포지티바 인기상품으로 구성된 올레+올토 선물세트입니다.<br />레몬 올레샷과 토마토 올토샷의 조합으로<br />건강한 선물을 전해보세요.</>
                 : lang === 'TH'
                     ? "เซตของขวัญสุดฮิตจาก POSITIVA ประกอบด้วย Oleo Shot และ Olto Shot เพื่อสุขภาพที่ดี"
                     : "A gift set of POSITIVA's best-sellers, combining Ole Shot and Ole To Shot for a healthy and delightful gift."
@@ -151,7 +151,7 @@ export function GiftSet({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
 
                                         <div>
                                             <h4 className="font-['Pretendard',sans-serif] font-bold text-lg text-[#09090a] mb-2">{lang === 'KR' ? '상세 설명' : lang === 'TH' ? 'รายละเอียด' : 'Detail'}</h4>
-                                            <p className="font-['Pretendard',sans-serif] font-regular text-[#555] leading-relaxed text-sm">
+                                            <p className="font-['Pretendard',sans-serif] font-regular text-[#555] leading-relaxed text-sm tracking-tight">
                                                 {selectedGift.detail}
                                             </p>
                                         </div>
