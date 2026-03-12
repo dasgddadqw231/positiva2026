@@ -43,13 +43,13 @@ export function GiftSet({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
         {
             id: 3,
             image: imgGift3,
-            title: lang === 'KR' ? "POSITIVA 2입 선물세트" : lang === 'TH' ? "เซตของขวัญ POSITIVA 2 ชิ้น" : "POSITIVA 2-Piece Gift Set",
+            title: lang === 'KR' ? "POSITIVA 인기 2입 선물세트" : lang === 'TH' ? "เซตของขวัญ POSITIVA ยอดนิยม 2 ชิ้น" : "POSITIVA Best 2-Piece Gift Set",
             composition: lang === 'KR' ? "(구성 : 올레샷+올토샷)" : lang === 'TH' ? "(ประกอบด้วย: Oleo Shot + Olto Shot)" : "(Composition : Ole Shot + Ole To Shot)",
             detail: lang === 'KR'
-                ? "새로운 조합으로 찾아뵐 예정입니다."
+                ? <>포지티바 인기상품으로 구성된 올레+올토 선물세트입니다.<br />레몬 올레샷과 토마토 올토샷의 조합으로 건강한 선물을 전해보세요.</>
                 : lang === 'TH'
-                    ? "เร็วๆ นี้ กับสูตรผสมใหม่"
-                    : "Coming soon with a new combination."
+                    ? "เซตของขวัญสุดฮิตจาก POSITIVA ประกอบด้วย Oleo Shot และ Olto Shot เพื่อสุขภาพที่ดี"
+                    : "A gift set of POSITIVA's best-sellers, combining Ole Shot and Ole To Shot for a healthy and delightful gift."
         }
     ];
 
