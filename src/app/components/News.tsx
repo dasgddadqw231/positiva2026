@@ -5,7 +5,7 @@ import imgNews2 from "../../assets/images/news/news2_v2.jpg";
 import imgNews3 from "../../assets/images/news/news3_v2.jpg";
 import imgNews4 from "../../assets/images/news/news4.png";
 import imgNews5 from "../../assets/images/news/news5.png";
-import imgNewsAlbumin from "../../assets/images/products/albumin-intro-2.png";
+import imgNewsPurpleBlend from "../../assets/images/news/purple-synergy-blend.png";
 
 type NewsItem = {
   id: number;
@@ -23,26 +23,27 @@ export function News({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
   const newsItems: NewsItem[] = [
     {
       id: 1,
-      image: imgNewsAlbumin,
-      title: lang === 'KR' ? "POSITIVA 알부민 출시" : lang === 'TH' ? "เปิดตัว POSITIVA อัลบูมิน" : "POSITIVA Albumin Launch",
-      date: "2026.03.09",
+      image: imgNewsPurpleBlend,
+      title: lang === 'KR' ? "POSITIVA 퍼플 시너지 블렌드 출시" : lang === 'TH' ? "เปิดตัว POSITIVA Purple Synergy Blend" : "POSITIVA Purple Synergy Blend Launch",
+      date: "2026.06.01",
       content: lang === 'KR'
-        ? "바이오티바 마시는 알부민 데일리 파워샷이 출시되었습니다. 프랑스산 난백알부민 97%와 5가지 활력 부스터를 배합한 고농축 에너지 파워샷으로, 지친 일상에 활력을 더해보세요."
+        ? "POSITIVA 퍼플 시너지 블렌드가 출시되었습니다.\n\n산뜻한 블루베리, 진한 하스카프베리, 묵직한 엘더베리. 3가지 퍼플 베리가 만나 매일 챙기기 좋은 트리플 퍼플 슈퍼베리 루틴을 완성했습니다.\n\n미국 USDA 인증 유기농 블루베리, 캐나다 로키산맥 야생 하스카프베리, 독일 EU 인증 유기농 야생 엘더베리를 100% NFC 통째 착즙으로 담았습니다."
         : lang === 'TH'
-          ? "Biotiva Drinking Albumin Daily Power Shot เปิดตัวแล้ว! ผสมอัลบูมินไข่ขาวจากฝรั่งเศส 97% และส่วนผสมเสริมพลัง 5 ชนิด มอบพลังงานให้กับทุกวันของคุณ"
-          : "Biotiva Drinking Albumin Daily Power Shot has launched. Formulated with 97% French egg white albumin and 5 vitality boosters, energize your daily life with this high-concentration power shot.",
-      objectPosition: 'center 15%',
+          ? "เปิดตัว POSITIVA Purple Synergy Blend แล้ว!\n\nบลูเบอร์รี่สดชื่น ฮัสกาเบอร์รี่เข้มข้น และเอลเดอร์เบอร์รี่ที่ลึก 3 เบอร์รี่สีม่วงมารวมกันเป็นรูทีนซูเปอร์เบอร์รี่ที่ดีต่อสุขภาพทุกวัน\n\nคั้น 100% NFC จากบลูเบอร์รี่ออร์แกนิก USDA (สหรัฐฯ) ฮัสกาเบอร์รี่ป่าจากเทือกเขาร็อคกี้ (แคนาดา) และเอลเดอร์เบอร์รี่ป่าออร์แกนิก EU (เยอรมนี)"
+          : "POSITIVA Purple Synergy Blend has launched.\n\nRefreshing blueberry, intense haskapberry, and rich elderberry — three purple berries come together to create a daily triple purple superfood routine.\n\n100% NFC whole-fruit extraction from USDA certified organic blueberry (USA), wild haskapberry from the Rocky Mountains (Canada), and EU certified organic wild elderberry (Germany).",
+      objectPosition: 'center',
+      objectFit: 'contain',
     },
     {
       id: 2,
       image: imgNews1,
-      title: lang === 'KR' ? "POSITIVA 올리브오일, 올레샷 출시" : lang === 'TH' ? "เปิดตัว POSITIVA น้ำมันมะกอก และ Oleo Shot" : "POSITIVA Olive Oil, Oleo Shot Launch",
+      title: lang === 'KR' ? "POSITIVA 공식 웹사이트 오픈" : lang === 'TH' ? "เปิดตัวเว็บไซต์อย่างเป็นทางการของ POSITIVA" : "POSITIVA Official Website Launch",
       date: "2025.10.01",
       content: lang === 'KR'
-        ? "POSITIVA 공식 온라인 스토어가 오픈했습니다. 이제 온라인에서도 POSITIVA의 프리미엄 올리브오일을 만나보세요. 오픈 기념 다양한 이벤트가 준비되어 있습니다."
+        ? "POSITIVA 공식 웹사이트가 오픈했습니다. 이제 온라인에서도 POSITIVA의 프리미엄 올리브오일을 만나보세요. 오픈 기념 다양한 이벤트가 준비되어 있습니다."
         : lang === 'TH'
-          ? "เปิดร้านค้าออนไลน์อย่างเป็นทางการของ POSITIVA แล้ว พบน้ำมันมะกอกพรีเมียมออนไลน์ พร้อมโปรโมชั่นพิเศษต้อนรับการเปิดร้าน"
-          : "POSITIVA official online store has opened. Meet POSITIVA's premium olive oil online now. Various events are prepared for the opening.",
+          ? "เปิดตัวเว็บไซต์อย่างเป็นทางการของ POSITIVA แล้ว พบน้ำมันมะกอกพรีเมียมออนไลน์ พร้อมโปรโมชั่นพิเศษต้อนรับการเปิดตัว"
+          : "POSITIVA official website has launched. Meet POSITIVA's premium olive oil online now. Various events are prepared for the launch.",
       objectPosition: 'top',
       objectFit: 'contain',
     },

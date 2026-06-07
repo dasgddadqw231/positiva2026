@@ -11,6 +11,7 @@ import {
 import img811 from "@/assets/images/hero1.png";
 import imgSecond from "@/assets/images/hero2.png";
 import imgThird from "@/assets/images/hero3_tomato.png";
+import imgPurpleBlend from "@/assets/images/hero4_purple_blend.png";
 import imgFourth from "@/assets/images/hero4.png";
 
 export function Hero({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
@@ -55,6 +56,19 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
         EN: "Organic Extra Virgin Olive Oil Tomato Oltoshot",
         KR: "유기농 엑스트라버진 올리브오일 토마토 올토샷",
         TH: "โอลโต้ช็อต น้ำมันมะกอก Extra Virgin ออร์แกนิกผสมมะเขือเทศ"
+      }
+    },
+    {
+      image: imgPurpleBlend,
+      title: {
+        EN: "Purple Synergy Blend",
+        KR: "Purple Synergy Blend",
+        TH: "Purple Synergy Blend"
+      },
+      desc: {
+        EN: "Premium Purple Synergy Blend",
+        KR: "프리미엄 퍼플 시너지 블렌드",
+        TH: "พรีเมียม เพอร์เพิล ซิเนอร์จี เบลนด์"
       }
     },
     {
@@ -113,7 +127,7 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
                 <div className="relative w-full h-full">
                   <img
                     alt={`Hero slide ${index + 1}`}
-                    className={`w-full h-full object-cover ${index === 3 ? 'object-[50%_55%]' : index === 2 ? 'object-[50%_50%]' : 'object-[50%_75%]'}`}
+                    className={`w-full h-full object-cover ${index === 4 ? 'object-[50%_55%]' : index === 2 ? 'object-[50%_50%]' : 'object-[50%_75%]'}`}
                     src={slide.image}
                   />
                   <div className="absolute inset-0 bg-black/20" />
@@ -130,28 +144,28 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className={`flex flex-col w-full pointer-events-auto ${!slides[current].title.EN ? 'invisible' : ''} ${current === 3 ? 'absolute inset-0' : 'gap-[16px]'}`}
+          className={`flex flex-col w-full pointer-events-auto ${!slides[current].title.EN ? 'invisible' : ''} ${current === 4 ? 'absolute inset-0' : 'gap-[16px]'}`}
         >
-          <h1 className={`font-['Gotham',sans-serif] font-bold md:text-[56px] leading-none text-white uppercase w-full md:whitespace-nowrap ${current === 0 ? 'text-[28px] tracking-[-1px] md:tracking-[-1.12px]' : 'text-4xl tracking-[-1.12px]'} ${current === 3 ? 'absolute top-[38%] w-full text-center !normal-case !tracking-[-0.02em] !font-black !text-[33px] md:!text-[80px] whitespace-nowrap' : ''}`}>
+          <h1 className={`font-['Gotham',sans-serif] font-bold md:text-[56px] leading-none text-white uppercase w-full md:whitespace-nowrap ${current === 0 ? 'text-[28px] tracking-[-1px] md:tracking-[-1.12px]' : 'text-4xl tracking-[-1.12px]'} ${current === 4 ? 'absolute top-[38%] w-full text-center !normal-case !tracking-[-0.02em] !font-black !text-[33px] md:!text-[80px] whitespace-nowrap' : ''}`}>
             {current === 0 ? (
               <>100% Organic<br className="md:hidden" /> Extra Virgin Olive Oil</>
             ) : (
               slides[current].title.EN ? (lang === 'KR' ? slides[current].title.KR : lang === 'TH' ? slides[current].title.TH : slides[current].title.EN) : "Placeholder Title"
             )}
           </h1>
-          <p className={`font-['Pretendard',sans-serif] font-medium text-lg md:text-[18px] leading-[1.445] tracking-[-0.0036px] text-white ${current === 3 ? 'absolute bottom-[15%] w-full text-center !font-black tracking-[0.1em] !text-[20px] md:!text-[40px] uppercase' : ''}`}>
+          <p className={`font-['Pretendard',sans-serif] font-medium text-lg md:text-[18px] leading-[1.445] tracking-[-0.0036px] text-white ${current === 4 ? 'absolute bottom-[15%] w-full text-center !font-black tracking-[0.1em] !text-[20px] md:!text-[40px] uppercase' : ''}`}>
             {slides[current].desc.EN ? (lang === 'KR' ? slides[current].desc.KR : lang === 'TH' ? slides[current].desc.TH : slides[current].desc.EN) : "Placeholder Description"}
           </p>
         </motion.div>
 
         <motion.button
           onClick={(e) => {
-            if (current < 3) {
-              // Slides 1, 2, 3 (indices 0, 1, 2) -> Anchor to #product
+            if (current < 4) {
+              // Slides 1-4 (indices 0-3) -> Anchor to #product
               const productSection = document.getElementById('product');
               productSection?.scrollIntoView({ behavior: 'smooth' });
             } else {
-              // Slide 4 (index 3) -> Default (next section)
+              // Slide 5 (index 4) -> Default (next section)
               const nextSection = e.currentTarget.closest('section')?.nextElementSibling;
               nextSection?.scrollIntoView({ behavior: 'smooth' });
             }
@@ -159,7 +173,7 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className={`pointer-events-auto w-[176px] px-[12px] py-[15px] border border-[#e8e9ea] rounded-[4px] hover:bg-white/10 transition-colors text-white font-['Gotham',sans-serif] font-bold text-[14px] text-center leading-[1.5] tracking-[-0.0798px] uppercase absolute ${current === 3 ? 'bottom-[25%] left-1/2 -translate-x-1/2' : 'bottom-[20%] left-10 md:left-[80px]'}`}
+          className={`pointer-events-auto w-[176px] px-[12px] py-[15px] border border-[#e8e9ea] rounded-[4px] hover:bg-white/10 transition-colors text-white font-['Gotham',sans-serif] font-bold text-[14px] text-center leading-[1.5] tracking-[-0.0798px] uppercase absolute ${current === 4 ? 'bottom-[25%] left-1/2 -translate-x-1/2' : 'bottom-[20%] left-10 md:left-[80px]'}`}
         >
           VIEW MORE
         </motion.button>

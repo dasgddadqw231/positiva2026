@@ -4,6 +4,7 @@ import { Hero } from "./components/Hero";
 import { Excellence } from "./components/Excellence";
 import { AboutSection } from "./components/AboutSection";
 import { Products } from "./components/Products";
+import { SynergyBlend } from "./components/SynergyBlend";
 import { HealthSection } from "./components/HealthSection";
 import { GiftSet } from "./components/GiftSet";
 import { Standard } from "./components/Standard";
@@ -24,6 +25,7 @@ export default function App() {
         <Excellence lang={lang} />
         <AboutSection lang={lang} />
         <Products lang={lang} />
+        <SynergyBlend lang={lang} />
         <HealthSection lang={lang} />
         <GiftSet lang={lang} />
         <Standard lang={lang} />
