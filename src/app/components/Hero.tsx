@@ -138,10 +138,10 @@ export function Hero({ lang }: { lang: 'KR' | 'EN' | 'TH' }) {
           <CarouselContent className="h-full -ml-0">
             {slides.map((slide, index) => (
               <CarouselItem key={index} className="h-full w-full pl-0">
-                <div className="relative w-full h-full">
+                <div className={`relative w-full h-full ${index === 3 ? 'bg-[#1c0000]' : index === 4 ? 'bg-[#08001a]' : ''}`}>
                   <img
                     alt={`Hero slide ${index + 1}`}
-                    className={`w-full h-full object-cover ${index === 5 ? 'object-[50%_55%]' : index === 2 ? 'object-[50%_50%]' : 'object-[50%_75%]'}`}
+                    className={`w-full h-full ${(index === 3 || index === 4) ? 'object-contain' : `object-cover ${index === 5 ? 'object-[50%_55%]' : index === 2 ? 'object-[50%_50%]' : 'object-[50%_75%]'}`}`}
                     src={slide.image}
                   />
                   <div className="absolute inset-0 bg-black/20" />
